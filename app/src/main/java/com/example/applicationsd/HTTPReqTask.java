@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.google.gson.JsonObject;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -26,7 +28,7 @@ class HTTPReqTask extends AsyncTask<String, Void, Void> {
                         postData.addProperty("sobrenome", params[1]);
                         postData.addProperty("email", params[2]);
 
-                        URL url = new URL("http://192.168.0.10/server.php");
+                        URL url = new URL("http://192.168.43.52/server.php");
                         urlConnection = (HttpURLConnection) url.openConnection();
                         urlConnection.setRequestProperty("Content-Type", "application/json");
                         urlConnection.setRequestMethod("POST");
@@ -49,6 +51,7 @@ class HTTPReqTask extends AsyncTask<String, Void, Void> {
 
                         String line;
                         while ((line = rd.readLine()) != null) {
+                                EventBus.getDefault().post(line);
                                 Log.i("data", line);
                         }
                 } catch (Exception e) {
