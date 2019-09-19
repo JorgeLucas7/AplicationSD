@@ -14,8 +14,8 @@ import org.greenrobot.eventbus.ThreadMode;
 public class MainActivity extends AppCompatActivity {
 
     private EditText etNome;
-    private EditText etSobrenome;
-    private EditText etEmail;
+    private EditText etSexo;
+    private EditText etIdade;
     private TextView tvResponse;
 
     @Override
@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etNome = findViewById(R.id.nome);
-        etSobrenome = findViewById(R.id.sobrenome);
-        etEmail = findViewById(R.id.email);
+        etSexo = findViewById(R.id.sexo);
+        etIdade = findViewById(R.id.idade);
         tvResponse = findViewById(R.id.tvResponse);
     }
 
     public void enviarDados(View view){
-        new HTTPReqTask().execute(etNome.getText().toString(), etSobrenome.getText().toString(), etEmail.getText().toString());
+            new HTTPReqTask().execute(etNome.getText().toString(), etSexo.getText().toString(), etIdade.getText().toString());
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

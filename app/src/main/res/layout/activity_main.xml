@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,43 +11,66 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_border">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="PROGRAMAÇÃO DISTRIBUÍDA"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:text="Exemplo Conexão Web" />
+            android:text="Lista 1 - Questão 2"
+            android:textColor="@color/colorWhite"/>
 
 
             <EditText
                 android:id="@+id/nome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
                 android:ems="10"
-                android:hint="Nome" >
+                android:hint="Nome"
+                android:background="@drawable/rounded_et"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <requestFocus />
             </EditText>
 
         <EditText
-            android:id="@+id/sobrenome"
+            android:id="@+id/sexo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="Sobrenome" />
+            android:hint="Sexo"
+            android:background="@drawable/rounded_et"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/idade"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:ems="10"
-            android:layout_marginTop="5dp"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:hint="Idade"
+            android:background="@drawable/rounded_et"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
 
         <Button
             android:id="@+id/button1"
@@ -59,7 +81,20 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:textSize="15dp"
+            android:text="Resultado: "
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvResponse"/>
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvResponse"
+            android:textColor="@color/colorWhite"/>
+
     </LinearLayout>
+
 </ScrollView>
